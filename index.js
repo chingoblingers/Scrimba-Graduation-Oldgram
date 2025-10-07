@@ -27,3 +27,44 @@ const posts = [
         likes: 152
     }
 ]
+
+const contentScreen = document.getElementById("screen")
+
+function loadContent(){
+
+const contentReel = posts.map(userPost => {
+    const {name,username,location,avatar,post,comment,likes} = userPost
+    return  `  <section>
+    <div class="user container"> 
+        <img src="./${avatar}" class="user-icon">
+        <div class="user-info">
+            <p> ${name} </p>
+            <p> ${location}</p>
+        </div> 
+    </div>
+    <img src="./${post}" class="user-photo">
+
+    <div class="container">
+
+        <div class="interact-icons">
+            <img src="./images/icon-heart.png" class="interact">
+            <img src="./images/icon-comment.png" class="interact">
+            <img src="./images/icon-dm.png" class="interact">
+        </div>
+
+        <div class="likes"> 
+            ${likes} likes
+        </div>
+        <div class="status"> 
+           ${username} ${comment}
+        </div>
+    </div>     
+    </section>
+ `
+}).join("") 
+
+contentScreen.innerHTML = contentReel
+
+}
+
+loadContent()
