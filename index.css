@@ -62,6 +62,10 @@ header .container{
     margin: 10px 0 0 0;
 }
 
+.likes, .name{
+    font-weight: bold;
+}
+
 .container{
     max-width: 343px;
     padding: 10px;

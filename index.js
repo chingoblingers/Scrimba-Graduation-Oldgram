@@ -38,7 +38,7 @@ const contentReel = posts.map(userPost => {
     <div class="user container"> 
         <img src="./${avatar}" class="user-icon">
         <div class="user-info">
-            <p> ${name} </p>
+            <p class="name"> ${name} </p>
             <p> ${location}</p>
         </div> 
     </div>
@@ -53,10 +53,10 @@ const contentReel = posts.map(userPost => {
         </div>
 
         <div class="likes"> 
-            ${likes} likes
+         ${likes} likes
         </div>
         <div class="status"> 
-           ${username} ${comment}
+          <strong> ${username} </strong> ${comment}
         </div>
     </div>     
     </section>
